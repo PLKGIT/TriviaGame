@@ -7,14 +7,16 @@ Pam Kelly's CSS for JavaScript Trivia Game
   }
 
 body {
-	background-image: url(../images/cool-3d-abstract-wallpaper.jpg);
+	background-image: url(../images/cool-background-pictures-0hfd8wxv.jpg);
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
+	color:#032f7d;
+	font-size: large;
 }
 
 .container-fluid {
-	padding: 10% 5%;
-	background-color: lightyellow;
+	padding: 10% 3%;
+	background-color: white;
 	width: 65%;
 	margin: 0 auto;
 }
@@ -24,13 +26,12 @@ header {
 }
 
 header h1{
-/* 	color: #842323; */
-	color: #dc3545;
+	color: #17a1b7;
 	font-family: 'Abril Fatface', cursive;
 }
 
 #timeleft{
-	color: orangered;
+	color: red;
 	font-weight: 400;
 }
 
@@ -40,11 +41,12 @@ main {
 
 footer {
 	position: fixed;
-	background-color: black;
+	background-color: #000000;
 	color: white;
 	text-align: center;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	padding: .5em;
+	font-size: small;
 }
