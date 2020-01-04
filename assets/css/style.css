@@ -1,0 +1,50 @@
+/* 
+Pam Kelly's CSS for JavaScript Trivia Game
+*/
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+	background-image: url(../images/cool-3d-abstract-wallpaper.jpg);
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container-fluid {
+	padding: 10% 5%;
+	background-color: lightyellow;
+	width: 65%;
+	margin: 0 auto;
+}
+
+header {
+	text-align: center;
+}
+
+header h1{
+/* 	color: #842323; */
+	color: #dc3545;
+	font-family: 'Abril Fatface', cursive;
+}
+
+#timeleft{
+	color: orangered;
+	font-weight: 400;
+}
+
+main {
+	
+}
+
+footer {
+	position: fixed;
+	background-color: black;
+	color: white;
+	text-align: center;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: .5em;
+}
