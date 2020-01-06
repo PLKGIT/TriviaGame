@@ -51,7 +51,7 @@ $(document).ready(function () {
     $("#done").on("click", function () {
 
         //Call stop() function
-        stop();
+        $(stop);
     })
 
     // START button clicked
@@ -67,7 +67,7 @@ $(document).ready(function () {
         $("#done").show();
 
         //Call run () function
-        run();
+        $(run);
 
         //  run() function
         function run() {
@@ -88,7 +88,7 @@ $(document).ready(function () {
             if (timer === 0) {
 
                 //  Call stop() function
-                stop();
+                $(stop);
 
                 //  Alert user that time has run out
                 alert("Time's Up!");
@@ -217,7 +217,7 @@ $(document).ready(function () {
         $("#done").hide();
 
         // Call gameOver() function
-        gameOver();
+        $(gameOver);
     }
 
     function gameOver() {
