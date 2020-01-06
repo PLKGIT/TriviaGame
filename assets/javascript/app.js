@@ -3,112 +3,222 @@
 */
 
 $(document).ready(function () {
-    // Global Variables
-    //Variable for total number of questions
-    var qCount = 5;
-    //Variables for timer
-    var timer = 30;
+
+    // Set Global Variables
+
+    // Game timer variables
+    var timer = 20;
     var intervalId;
-    //Counter for correct answers
-    var countRight=0;
-    //Counter for incorrect answers
-    var countWrong=0;
-    //Storage for User's Answer
-    var userQ1 = 0;
-    var userQ2 = 0;
-    var userQ3 = 0;
-    var userQ4 = 0;
-    var userQ5 = 0;
-    //Array of answers
-    var arrayCorrect = [[1, 3], [2, 2], [3, 2], [4, 1], [5, 4]]
 
-    // On Page Load
-        //Show START button
-        $("#start").show();
-        //Make sure form, done button, and all done message are hidden
-        $("#questions").hide();
-        $("#done").hide();
-        $("#message").hide();
+    // Counter for correct answers
+    var countRight = 0;
 
-    // Listen for Start and Done button clicks
+    // Counter for incorrect answers
+    var countWrong = 0;
 
-    // Start button Clicked
-        $("#start").on("click", function () {
-            $("#start").hide();
-            //Show questions form
-            $("#questions").show();
-            //Show DONE button 
-            $("#done").show();
-            //Call run function to start the timer
-            run();
-            //  Run function
-            function run() {
-                clearInterval(intervalId);
-                intervalId = setInterval(decrement, 1000);
+    // Counter for unanswered questions
+    var countUnanswered = 0;
+
+    // Variables for user's input
+    var userQ1;
+    var userQ2;
+    var userQ3;
+    var userQ4;
+    var userQ5;
+
+    // Answer Key Array
+    var arrayCorrect = [["userQ1", 3], ["userQ2", 2], ["userQ3", 2], ["userQ4", 1], ["userQ5", 4]]
+
+
+    //Show START button
+    $("#start").show();
+    //Make sure form, done button, and all done message are hidden
+    $("#questions").hide();
+    $("#done").hide();
+    $("#message").hide();
+
+    // Listen for START and DONE button clicks
+
+    // DONE button clicked
+    $("#done").on("click", function () {
+
+        //Call stop() function
+        stop();
+    })
+
+    // START button clicked
+    $("#start").on("click", function () {
+
+        // Hide the START button
+        $("#start").hide();
+
+        //Show trivia questions form
+        $("#questions").show();
+
+        //Show DONE button 
+        $("#done").show();
+
+        //Call run () function
+        run();
+
+        //  run() function
+        function run() {
+            clearInterval(intervalId);
+            intervalId = setInterval(decrement, 1000);
+        }
+
+        // decrement() function
+        function decrement() {
+
+            // Decrement timer by 1 second
+            timer--;
+
+            // Update the "show-number" span tag with the current timer value
+            $("#show-number").text(timer);
+
+            // Stop the game if the timer reaches 0 before the DONE button is clicked
+            if (timer === 0) {
+
+                //  Call stop() function
+                stop();
+
+                //  Alert user that time has run out
+                alert("Time's Up!");
             }
-            // Decrement function
-            function decrement() {
-                // Decrement by 1 second
-                timer--;
+        }
 
-                //  Show the updated number in the show-number span tag
-                $("#show-number").text(timer);
+    })
 
-                //  Call stop function once the timer reaches 0
-                if (timer === 0) {
 
-                    //  Call stop function
-                    stop();
+    function stop() {
+        //  Clear intervalId variable by passing it to the clearInterval () function
+        clearInterval(intervalId);
 
-                    //  Alert time's up
-                    alert("Time's Up!");
+        // Check if question is unanswered and increment the countUnanswered variable if true
+        // Score User's input for each answered question and imcrement the appropriate counter (countRight or countWrong)
+
+        // Question 1
+
+        // Check to see if the question was answered
+        if ($("input[name='inlineQ1']:checked").length > 0) {
+            // If answered, set the value of the user's input to the userQ1 variable
+            userQ1 = $("input[name='inlineQ1']:checked").val();
+            // Loop through the multidimentional answer key array
+            for (var i = 0; i < arrayCorrect.length; i++) {
+                // Search the array for the matching question
+                if (arrayCorrect[i][0] === 'userQ1') {
+                    // Compare user's answer to the correct answer
+                    if (arrayCorrect[i][1] == userQ1) {
+                        // If the user's input matches the correct answer, increment the countRight variable and break out of the loop
+                        countRight++;
+                        break;
+                    } else {
+                        // If the user's input does not match the correct answer, increment the countWrong variable and break out of the loop
+                        countWrong++;
+                        break;
+                    }
                 }
             }
 
-        })
-    //Done button Clicked
-        $("#done").on("click", function () {
-            //Store Values for User Input
+        } else {
+            // Increment the unanswered question counter
+            countUnanswered++;
+        }
 
-            userQ1 = $("input[name='inlineQ1']:checked").val();
+        // Question 2 (see detailed comments from Question 1)
+
+        if ($("input[name='inlineQ2']:checked").length > 0) {
             userQ2 = $("input[name='inlineQ2']:checked").val();
+            for (var i = 0; i < arrayCorrect.length; i++) {
+                if (arrayCorrect[i][0] === 'userQ2') {
+                    if (arrayCorrect[i][1] == userQ2) {
+                        countRight++;
+                        break;
+                    } else {
+                        countWrong++;
+                        break;
+                    }
+                }
+            }
+
+        } else {
+            countUnanswered++;
+        }
+
+        // Question 3 (see detailed comments from Question 1)
+
+        if ($("input[name='inlineQ3']:checked").length > 0) {
             userQ3 = $("input[name='inlineQ3']:checked").val();
+            for (var i = 0; i < arrayCorrect.length; i++) {
+                if (arrayCorrect[i][0] === 'userQ3') {
+                    if (arrayCorrect[i][1] == userQ3) {
+                        countRight++;
+                        break;
+                    } else {
+                        countWrong++;
+                        break;
+                    }
+                }
+            }
+        } else {
+            countUnanswered++;
+        }
+
+        // Question 4 (see detailed comments from Question 1)
+
+        if ($("input[name='inlineQ4']:checked").length > 0) {
             userQ4 = $("input[name='inlineQ4']:checked").val();
+            for (var i = 0; i < arrayCorrect.length; i++) {
+                if (arrayCorrect[i][0] === 'userQ4') {
+                    if (arrayCorrect[i][1] == userQ4) {
+                        countRight++;
+                        break;
+                    } else {
+                        countWrong++;
+                        break;
+                    }
+                }
+            }
+        } else {
+            countUnanswered++;
+        }
+
+        // Question 5 (see detailed comments from Question 1)
+
+        if ($("input[name='inlineQ5']:checked").length > 0) {
             userQ5 = $("input[name='inlineQ5']:checked").val();
+            for (var i = 0; i < arrayCorrect.length; i++) {
+                if (arrayCorrect[i][0] === 'userQ5') {
+                    if (arrayCorrect[i][1] == userQ5) {
+                        countRight++;
+                        break;
+                    } else {
+                        countWrong++;
+                        break;
+                    }
+                }
+            }
+        } else {
+            countUnanswered++;
+        }
 
-            console.log(userQ1);
-            console.log(userQ2);
-            console.log(userQ3);
-            console.log(userQ4);
-            console.log(userQ5);
-
-            //Call Stop function
-            stop();
-        })
-
-    function stop() {
-        //  Clears our intervalId
-        //  We just pass the name of the interval
-        //  to the clearInterval function.
-        clearInterval(intervalId);
-        //Hide questions form
+        // Hide trivia questions form
         $("#questions").hide();
-        //Hide DONE button
+
+        // Hide DONE button
         $("#done").hide();
-        //Call Score function
-        score();
+
+        // Call gameOver() function
+        gameOver();
     }
 
-    function score() {
-        //Display Game over message
+    function gameOver() {
+        // Show "All Done!" message
         $("#message").show();
-        //Check User's Answers Against Correct Answer Array
-            // countRight = # Correct
-            // countWrong = # Wrong
 
-        //Display game statistics
-            $("#right").text(countRight);
-            $("#wrong").text(countWrong);
-            $("#unanswered").text(qCount-countRight-countWrong);
-}
+        // Display user score statistics
+        $("#right").text(countRight);
+        $("#wrong").text(countWrong);
+        $("#unanswered").text(countUnanswered);
+    }
 })
