@@ -81,7 +81,7 @@ Full-Stack Coding Bootcamp through UCB Extension
 #### Deployed Game
 [Trivia Game](https://plkgit.github.io/TriviaGame/) deployed at https://plkgit.github.io/TriviaGame/
 #### Portfolio.html in Bootstrap Portfolio demonstrating a link to the game
-[Bootstrap Porfolio with Link to Crystals Collector Game](https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html) at 
+[Bootstrap Porfolio with Link to Totally Trivial Trivia Game](https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html) at 
 https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html
 
 - - 
