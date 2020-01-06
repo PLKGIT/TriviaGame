@@ -10,9 +10,9 @@ $(document).ready(function () {
     var timer = 30;
     var intervalId;
     //Counter for correct answers
-    var countRight;
+    var countRight=0;
     //Counter for incorrect answers
-    var countWrong;
+    var countWrong=0;
     //Storage for User's Answer
     var userQ1 = 0;
     var userQ2 = 0;
@@ -23,54 +23,54 @@ $(document).ready(function () {
     var arrayCorrect = [[1, 3], [2, 2], [3, 2], [4, 1], [5, 4]]
 
     // On Page Load
-    //Show game title
-    //Show START button
-    $("#start").show();
-    //Form and Done button hidden
-    $("#questions").hide();
-    $("#done").hide();
-    $("#message").hide();
+        //Show START button
+        $("#start").show();
+        //Make sure form, done button, and all done message are hidden
+        $("#questions").hide();
+        $("#done").hide();
+        $("#message").hide();
 
     // Listen for Start and Done button clicks
-    //Start button Clickedt
-    $("#start").on("click", function () {
-        $("#start").hide();
-        //Show questions form
-        $("#questions").show();
-        //Show DONE button 
-        $("#done").show();
-        //Call run function to start the timer
-        run();
-        //  Run function
-        function run() {
-            clearInterval(intervalId);
-            intervalId = setInterval(decrement, 1000);
-        }
-        // Decrement function
-        function decrement() {
-            // Decrement by 1 second
-            timer--;
 
-            //  Show the updated number in the show-number span tag
-            $("#show-number").text(timer);
-
-            //  Call stop function once the timer reaches 0
-            if (timer === 0) {
-
-                //  Call stop function
-                stop();
-
-                //  Alert time's up
-                alert("Time's Up!");
+    // Start button Clicked
+        $("#start").on("click", function () {
+            $("#start").hide();
+            //Show questions form
+            $("#questions").show();
+            //Show DONE button 
+            $("#done").show();
+            //Call run function to start the timer
+            run();
+            //  Run function
+            function run() {
+                clearInterval(intervalId);
+                intervalId = setInterval(decrement, 1000);
             }
-        }
+            // Decrement function
+            function decrement() {
+                // Decrement by 1 second
+                timer--;
 
-    })
+                //  Show the updated number in the show-number span tag
+                $("#show-number").text(timer);
+
+                //  Call stop function once the timer reaches 0
+                if (timer === 0) {
+
+                    //  Call stop function
+                    stop();
+
+                    //  Alert time's up
+                    alert("Time's Up!");
+                }
+            }
+
+        })
     //Done button Clicked
-    $("#done").on("click", function () {
-        //Call Stop function
-        stop();
-    })
+        $("#done").on("click", function () {
+            //Call Stop function
+            stop();
+        })
 
     function stop() {
         //  Clears our intervalId
@@ -88,13 +88,12 @@ $(document).ready(function () {
     function score() {
         //Display Game over message
         $("#message").show();
-        //Check Answers Against Array
-        // countRight = # Correct
-        // countWrong = # Wrong
-        // Unanswered = qCount - countRight - countWrong
-        //Display answer statistics
-        //Correct Answers: #
-        //Incorrect Answers: #
-        //Unanswered Questions: #
-    }
+        //Check User's Answers Against Correct Answer Array
+            // countRight = # Correct
+            // countWrong = # Wrong
+        //Display game statistics
+            $("#right").text(countRight);
+            $("#wrong").text(countWrong);
+            $("#unanswered").text(qCount-countRight-countWrong);
+}
 })

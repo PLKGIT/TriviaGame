@@ -41,7 +41,20 @@ header h1{
 }
 
 #stats {
-	
+	color: darkgray;
+}
+
+#right {
+	color: green;
+	font-weight: 800;
+}
+#wrong {
+	color: red;
+	font-weight: 800;
+}
+#unanswered {
+	color: purple;
+	font-weight: 800;
 }
 
 footer {
