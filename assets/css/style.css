@@ -5,6 +5,9 @@ Pam Kelly's CSS for JavaScript Trivia Game
 * {
     box-sizing: border-box;
   }
+html {
+	height: 100%;
+}
 
 body {
 	background-image: url(../images/cool-background-pictures-0hfd8wxv.jpg);
@@ -14,12 +17,19 @@ body {
 	font-size: large;
 }
 
-.container {
-	padding: 5% 3%;
-	background-color: white;
+.container-fluid {
+	height: 100%;
 	width: 65%;
 	margin: 0 auto;
-	height: 100%;
+	overflow-y: hidden; /* don't show content that exceeds my height */
+	background-color: white;
+}
+.container {
+	padding: 5% 3%;
+	width: 65%;
+	margin: 0 auto;
+	background-color: white;
+	overflow-y: auto;
 }
 
 header {
@@ -53,7 +63,7 @@ header h1{
 	font-weight: 800;
 }
 #unanswered {
-	color: purple;
+	color: #17a1b7;
 	font-weight: 800;
 }
 
