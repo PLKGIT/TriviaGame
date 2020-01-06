@@ -21,133 +21,145 @@
 
 <body>
 
-        <div class="container">
-            <header>
-                <h1>Totally Trivial Trivia</h1>
-                <h4>Seconds Remaining: <span id="show-number"></span></h4>
-                <button type="button" id="start" class="btn btn-info btn-lg btn-block">START</button>
-            </header>
-        </div>
-        <main class="container-fluid fill-height">
+    <div class="container">
+        <header>
+            <h1>Totally Trivial Trivia</h1>
+            <h4>Seconds Remaining: <span id="show-number"></span></h4>
+            <button type="button" id="start" class="btn btn-info btn-lg btn-block">START</button>
+            <hr>
+        </header>
+    </div>
+    <main>
         <div class="container">
             <div class="collapse" id="questions">
                 <form>
                     <div class="form-group" id="Q1">
-                        <label for="Q1">Question #1</label><br>
+                        <label class="bold" for="Q1">What was Cary Grant's real name?</label><br>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ1" id="inlineQ1A1" value="1">
-                            <label class="form-check-label" for="inlineRadio1">1</label>
+                            <label class="form-check-label" for="inlineRadio1">Archibald Jones</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ1" id="inlineQ1A2" value="2">
-                            <label class="form-check-label" for="inlineRadio2">2</label>
+                            <label class="form-check-label" for="inlineRadio2">Archibald Leach</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ1" id="inlineQ1A3" value="3">
-                            <label class="form-check-label" for="inlineRadio3">3</label>
+                            <label class="form-check-label" for="inlineRadio3">Robert Beasley</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ1" id="inlineQ1A4" value="4">
-                            <label class="form-check-label" for="inlineRadio4">4</label>
+                            <label class="form-check-label" for="inlineRadio4">Ronald Leach</label>
                         </div>
                     </div>
                     <div class="form-group" id="Q2">
-                        <label for="Q2">Question #2</label><br>
+                        <label class="bold" for="Q2">How many tablespoons are in a cup?</label><br>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ2" id="inlineQ2A1" value="1">
-                            <label class="form-check-label" for="inlineRadio1">1</label>
+                            <label class="form-check-label" for="inlineRadio1">8</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ2" id="inlineQ2A2" value="2">
-                            <label class="form-check-label" for="inlineRadio2">2</label>
+                            <label class="form-check-label" for="inlineRadio2">24</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ2" id="inlineQ2A3" value="3">
-                            <label class="form-check-label" for="inlineRadio3">3</label>
+                            <label class="form-check-label" for="inlineRadio3">36</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ2" id="inlineQ2A4" value="4">
-                            <label class="form-check-label" for="inlineRadio4">4</label>
+                            <label class="form-check-label" for="inlineRadio4">16</label>
                         </div>
                     </div>
                     <div class="form-group" id="Q3">
-                        <label for="Q3">Question #3</label><br>
+                        <label class="bold" for="Q3">What make and model of car had problems with an exploding trunk?</label><br>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ3" id="inlineQ3A1" value="1">
-                            <label class="form-check-label" for="inlineRadio1">1</label>
+                            <label class="form-check-label" for="inlineRadio1">Ford Escort</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ3" id="inlineQ3A2" value="2">
-                            <label class="form-check-label" for="inlineRadio2">2</label>
+                            <label class="form-check-label" for="inlineRadio2">Toyota Corolla</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ3" id="inlineQ3A3" value="3">
-                            <label class="form-check-label" for="inlineRadio3">3</label>
+                            <label class="form-check-label" for="inlineRadio3">Ford Pinto</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ3" id="inlineQ3A4" value="4">
-                            <label class="form-check-label" for="inlineRadio4">4</label>
+                            <label class="form-check-label" for="inlineRadio4">Kia Sportage</label>
                         </div>
                     </div>
                     <div class="form-group" id="Q4">
-                        <label for="Q4">Question #4</label><br>
+                        <label class="bold" for="Q4">How many terms did President Franklin D. Roosevelt serve?</label><br>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ4" id="inlineQ4A1" value="1">
-                            <label class="form-check-label" for="inlineRadio1">1</label>
+                            <label class="form-check-label" for="inlineRadio1">3</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ4" id="inlineQ4A2" value="2">
-                            <label class="form-check-label" for="inlineRadio2">2</label>
+                            <label class="form-check-label" for="inlineRadio2">4</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ4" id="inlineQ4A3" value="3">
-                            <label class="form-check-label" for="inlineRadio3">3</label>
+                            <label class="form-check-label" for="inlineRadio3">2</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ4" id="inlineQ4A4" value="4">
-                            <label class="form-check-label" for="inlineRadio4">4</label>
+                            <label class="form-check-label" for="inlineRadio4">1</label>
                         </div>
                     </div>
                     <div class="form-group" id="Q5">
-                        <label for="Q5">Question #5</label><br>
+                        <label class="bold" for="Q5">How many different vowels are in the longest place name in the United
+                            States?</label><br>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ5" id="inlineQ5A1" value="1">
-                            <label class="form-check-label" for="inlineRadio1">1</label>
+                            <label class="form-check-label" for="inlineRadio1">3</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ5" id="inlineQ5A2" value="2">
-                            <label class="form-check-label" for="inlineRadio2">2</label>
+                            <label class="form-check-label" for="inlineRadio2">5</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ5" id="inlineQ5A3" value="3">
-                            <label class="form-check-label" for="inlineRadio3">3</label>
+                            <label class="form-check-label" for="inlineRadio3">1</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineQ5" id="inlineQ5A4" value="4">
-                            <label class="form-check-label" for="inlineRadio4">4</label>
+                            <label class="form-check-label" for="inlineRadio4">2</label>
                         </div>
+                        <br>
                     </div>
+
                     <button type="button" id="done" class="btn btn-danger btn-lg btn-block" data-toggle="collapse"
                         data-target="#questions" aria-expanded="false" aria-controls="questions">
                         DONE
                     </button>
                 </form>
             </div>
-
-        </div>
-        </div>
-        <div class="container">
-            <div id="message">
-                <h4>All done!</h4>
-                <span id="stats">
-                    Correct: <span id="right">#</span><br>
-                    Incorrect: <span id="wrong">#</span><br>
-                    Unanswered: <span id="unanswered">#</span><br>
-                </span>
+            <div class="container text-center">
+                <div id="exitgame" class="btn btn-primary btn-lg">EXIT</div>
             </div>
-        </div>
+
     </main>
+
+    </div>
+    </div>
+    <div class=" container">
+        <div id="message">
+            <h3>All Done!</h3>
+            <hr>
+            <span id="stats">
+                Correct: <span id="right">#</span><br>
+                Incorrect: <span id="wrong">#</span><br>
+                Unanswered: <span id="unanswered">#</span><br>
+            </span>
+        </div>
+    </div>
+
+
     <footer>
+
         <div id="copyright">Copyright &copy; 2020 Pamela L. Kelly</div>
     </footer>
 

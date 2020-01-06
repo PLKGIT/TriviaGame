@@ -27,8 +27,7 @@ $(document).ready(function () {
     var userQ5;
 
     // Answer Key Array
-    var arrayCorrect = [["userQ1", 3], ["userQ2", 2], ["userQ3", 2], ["userQ4", 1], ["userQ5", 4]]
-
+    var arrayCorrect = [["userQ1", 2], ["userQ2", 4], ["userQ3", 3], ["userQ4", 2], ["userQ5", 1]];
 
     //Show START button
     $("#start").show();
@@ -37,7 +36,16 @@ $(document).ready(function () {
     $("#done").hide();
     $("#message").hide();
 
-    // Listen for START and DONE button clicks
+    // Listen for START, DONE, EXIT button clicks
+
+    // EXIT button clicked
+
+    $("#exitgame").click(function () {
+
+    alert("Goodbye!");
+    window.location.href = 'https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html';
+    })
+
 
     // DONE button clicked
     $("#done").on("click", function () {

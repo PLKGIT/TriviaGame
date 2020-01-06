@@ -17,19 +17,15 @@ body {
 	font-size: large;
 }
 
-.container-fluid {
-	height: 100%;
-	width: 65%;
-	margin: 0 auto;
-	overflow-y: hidden; /* don't show content that exceeds my height */
-	background-color: white;
+.bold {
+	font-weight: bold;
 }
+
 .container {
-	padding: 5% 3%;
+	padding: 3% 3%;
 	width: 65%;
 	margin: 0 auto;
 	background-color: white;
-	overflow-y: auto;
 }
 
 header {
