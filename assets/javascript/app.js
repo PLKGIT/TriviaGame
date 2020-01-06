@@ -68,6 +68,20 @@ $(document).ready(function () {
         })
     //Done button Clicked
         $("#done").on("click", function () {
+            //Store Values for User Input
+
+            userQ1 = $("input[name='inlineQ1']:checked").val();
+            userQ2 = $("input[name='inlineQ2']:checked").val();
+            userQ3 = $("input[name='inlineQ3']:checked").val();
+            userQ4 = $("input[name='inlineQ4']:checked").val();
+            userQ5 = $("input[name='inlineQ5']:checked").val();
+
+            console.log(userQ1);
+            console.log(userQ2);
+            console.log(userQ3);
+            console.log(userQ4);
+            console.log(userQ5);
+
             //Call Stop function
             stop();
         })
@@ -91,6 +105,7 @@ $(document).ready(function () {
         //Check User's Answers Against Correct Answer Array
             // countRight = # Correct
             // countWrong = # Wrong
+
         //Display game statistics
             $("#right").text(countRight);
             $("#wrong").text(countWrong);
