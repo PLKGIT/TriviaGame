@@ -14,11 +14,12 @@ body {
 	font-size: large;
 }
 
-.container-fluid {
-	padding: 10% 3%;
+.container {
+	padding: 5% 3%;
 	background-color: white;
 	width: 65%;
 	margin: 0 auto;
+	height: 100%;
 }
 
 header {
@@ -30,17 +31,17 @@ header h1{
 	font-family: 'Abril Fatface', cursive;
 }
 
-#timeleft{
+#show-number{
 	color: red;
 	font-weight: 400;
 }
 
-main {
-	
+#message {
+	text-align: center;
 }
 
 #stats {
-
+	
 }
 
 footer {

@@ -20,70 +20,126 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <header>
             <h1>Totally Trivial Trivia</h1>
-            <h4>Time Remaining: <span id="timeleft">00:00</span></h4>
-            <br>
+            <h4>Seconds Remaining: <span id="show-number"></span></h4>
             <button type="button" id="start" class="btn btn-info btn-lg btn-block">START</button>
         </header>
-
-        <main>
-            <form id="questions">
-                Q1<br>
-                <input type="radio" id="a1" name="q1" value="a1">
-                <label for="a1">a1</label>&nbsp;
-
-                <input type="radio" id="a2" name="q1" value="a2">
-                <label for="a2">a2</label>&nbsp;
-
-                <input type="radio" id="a3" name="q1" value="a3">
-                <label for="a3">a3</label><br>
-
-                Q2<br>
-                <input type="radio" id="a1" name="q2" value="a1">
-                <label for="a1">a1</label>&nbsp;
-
-                <input type="radio" id="a2" name="q2" value="a2">
-                <label for="a2">a2</label>&nbsp;
-
-                <input type="radio" id="a3" name="q2" value="a3">
-                <label for="a3">a3</label><br>
-                Q3<br>
-                <input type="radio" id="a1" name="q3" value="a1">
-                <label for="a1">a1</label>&nbsp;
-
-                <input type="radio" id="a2" name="q3" value="a2">
-                <label for="a2">a2</label>&nbsp;
-
-                <input type="radio" id="a3" name="q3" value="a3">
-                <label for="a3">a3</label><br>
-                Q4<br>
-                <input type="radio" id="a1" name="q4" value="a1">
-                <label for="a1">a1</label>&nbsp;
-
-                <input type="radio" id="a2" name="q4" value="a2">
-                <label for="a2">a2</label>&nbsp;
-
-                <input type="radio" id="a3" name="q4" value="a3">
-                <label for="a3">a3</label><br>
-                Q5<br>
-                <input type="radio" id="a1" name="q5" value="a1">
-                <label for="a1">a1</label>&nbsp;
-
-                <input type="radio" id="a2" name="q5" value="a2">
-                <label for="a2">a2</label>&nbsp;
-
-                <input type="radio" id="a3" name="q5" value="a3">
-                <label for="a3">a3</label><br>
-                <br>
+    </div>
+    <div class="container">
+        <div class="collapse" id="questions">
+            <form>
+            <div class="form-group" id="Q1">
+                <label for="Q1">Question #1</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ1" id="inlineQ1A1" value="1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ1" id="inlineQ1A2" value="2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ1" id="inlineQ1A3" value="3">
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ1" id="inlineQ1A4" value="4">
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Q2">Question #2</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ2" id="inlineQ2A1" value="1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ2" id="inlineQ2A2" value="2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ2" id="inlineQ2A3" value="3">
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ2" id="inlineQ2A4" value="4">
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Q3">Question #3</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ3" id="inlineQ3A1" value="1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ3" id="inlineQ3A2" value="2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ3" id="inlineQ3A3" value="3">
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ3" id="inlineQ3A4" value="4">
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Q4">Question #4</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ4" id="inlineQ4A1" value="1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ4" id="inlineQ4A2" value="2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ4" id="inlineQ4A3" value="3">
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ4" id="inlineQ4A4" value="4">
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Q5">Question #5</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ5" id="inlineQ5A1" value="1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ5" id="inlineQ5A2" value="2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ5" id="inlineQ5A3" value="3">
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineQ5" id="inlineQ5A4" value="4">
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                </div>
+            </div>
+            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+            <button type="button" id="done" class="btn btn-danger btn-lg btn-block" data-toggle="collapse"
+            data-target="#questions" aria-expanded="false" aria-controls="questions">
+                DONE
+            </button>
             </form>
-            <button type="button" id="done" class="btn btn-danger btn-lg btn-block">DONE</button>
-        </main>
-
-        <div id="stats">
         </div>
 
+    </div>
+    </div>
+    <div class="container">
+        <div id="message">
+            <h4>All done!</h4>
+            <span id="stats">Stats HERE</span>
+        </div>
     </div>
     <footer>
         <div id="copyright">Copyright &copy; 2020 Pamela L. Kelly</div>
