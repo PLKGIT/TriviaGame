@@ -1,5 +1,5 @@
-# JavaScript Assignment 2
-PLK's Trivia Game
+# JavaScript Assignment 2: Trivia Game
+Homework #5
 
 ## Overview
 In this assignment, you'll create a Trivia game using JavaScript for the logic and jQuery to manipulate HTML. Be sure to layout this app with valid HTML and stylish CSS.
@@ -86,4 +86,3 @@ https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html
 
 - - 
 Copyright &copy; 2020 Pamela L. Kelly
-
