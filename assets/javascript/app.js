@@ -43,7 +43,7 @@ $(document).ready(function () {
     $("#exitgame").click(function () {
 
     alert("Goodbye!");
-    window.location.href = 'https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html';
+    window.location.href = 'https://www.pamkelly.com/portdev.html';
     })
 
 
