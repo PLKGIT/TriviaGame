@@ -38,5 +38,4 @@ Pam Kelly at [esq.kelly@gmail.com](mailto:esq.kelly@gmail.com)
 [Professional Portfolio](https://www.pamkelly.com/portdev.html) at 
 https://www.pamkelly.com/portdev.html
 
-- - 
 Copyright &copy; 2020 Pamela L. Kelly
